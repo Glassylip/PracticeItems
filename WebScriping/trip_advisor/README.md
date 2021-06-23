@@ -1,5 +1,8 @@
 # Trip Advisor全国データスクレイピング用 
-
+## 環境構築
+```bash
+$ pip freeze >requirements.txt
+```
 
 ## GetURL.py
 全国観光地URL取得用
