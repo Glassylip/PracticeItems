@@ -13,6 +13,7 @@ import asyncio
 from tqdm import tqdm
 from shutil import rmtree
 
+# 観光地データ取得
 async def spot_data(r,i):
     find = r.html.find
     spot_name[i].append(find('h1#HEADING')[0].text)
@@ -48,6 +49,7 @@ async def spot_data(r,i):
     except:
         tel[i].append(nan)
 
+# データ保存
 def datasave(path):
     # データ整形
     t = [[] for i in range(len(spot_tag))]
@@ -71,7 +73,8 @@ def datasave(path):
     df_spot.columns = ["SpotName", "Score", "Tag", "Count", "Ranking", "Address", "Tel", "Lat", "Lng", "URL"]
     df_spot = df_spot.dropna(axis=0, thresh=7).reset_index(drop=True)
     df_spot.to_csv(path + "/" + region + "_spot.csv",encoding="utf_8_sig",index=False)
-    
+
+# 並列処理
 async def do(semaphore):
     async def getURL(url,i):
         async with semaphore:
@@ -175,7 +178,7 @@ if __name__ == "__main__":
         """
 
     
- 
+     # データ圧縮
     if len([lists for lists in os.listdir(path) if os.path.isfile(os.path.join(path, lists))]) == 47:
         startdir = path # 圧縮するフォルダpath
         file_news = startdir +'.zip' # zipファイル名前
