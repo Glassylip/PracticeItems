@@ -1,1 +1,1 @@
-Trip Advisor全国データスクレイピング用 (gcpアップロード済み)
+Trip Advisor口コミデータ取得用
