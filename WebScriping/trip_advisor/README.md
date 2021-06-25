@@ -1,4 +1,4 @@
-# Trip Advisor全国データスクレイピング用 
+# Trip Advisor全国データスクレイピング用(2020) 
 ## 環境構築
 ```bash
 $ pip freeze >requirements.txt
