@@ -1,16 +1,16 @@
-## 年齢推定
-C3AEモデルによる年齢推定スクリプト
+## Age estimation
+Age estimation script by C3AE model
 
 ## C3AE.ipynb
-モデル作成スクリプト
+Modeling script
 
 ## Age_es.ipynb
-カメラやURLによる年齢推定スクリプト
+Age estimation script by camera or URL
 
-## conda環境の作成
+## Creating a conda environment
 ```bash
 conda env create -f=fa.yml
 ```
 
-## YoutubeのURLから動かす
+## Play with the URL of Youtube
 ![](img/youtube.jpg)
