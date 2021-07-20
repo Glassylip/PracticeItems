@@ -1,7 +1,7 @@
 
-## コンビニエンスストア情報取得
-1. 店舗名
-2. 経緯度
-3. 営業時間
-4. 電話番号
-5. 住所
+## Convenience store information acquisition
+1. shop name
+2. latlng
+3. business hours
+4. telephone number
+5. address
