@@ -13,7 +13,7 @@ import asyncio
 from tqdm import tqdm
 from shutil import rmtree
 
-# 観光地データ取得
+# get tourist destination data
 async def spot_data(r,i):
     find = r.html.find
     spot_name[i].append(find('h1#HEADING')[0].text)
@@ -49,7 +49,7 @@ async def spot_data(r,i):
     except:
         tel[i].append(nan)
 
-# データ保存
+# save data
 def datasave(path):
     # データ整形
     t = [[] for i in range(len(spot_tag))]
@@ -74,7 +74,7 @@ def datasave(path):
     df_spot = df_spot.dropna(axis=0, thresh=7).reset_index(drop=True)
     df_spot.to_csv(path + "/" + region + "_spot.csv",encoding="utf_8_sig",index=False)
 
-# 並列処理
+# Parallel processing
 async def do(semaphore):
     async def getURL(url,i):
         async with semaphore:
@@ -118,7 +118,7 @@ def getURL(url,i):
     
 if __name__ == "__main__":
     
-    # 地域url取得
+    # Get the regional url
     while True:
         region = input("県名(例：saitama)を入力してください： ")
         df_url = pd.read_pickle("allURL.pkl")
@@ -134,15 +134,15 @@ if __name__ == "__main__":
     # UserAgent
     ua = UserAgent()
 
-    # CPUコア数
+    # CPU core
     semaphore = asyncio.Semaphore(value=8)
 
     asession = AsyncHTMLSession()
     
-    # ファイル保存先
+    # File save destination
     path = "spot_data"
     
-    # 保存先フォルダ作成
+    # Create destination folder
     try:  
         os.mkdir("spot_data")
     except:
@@ -166,7 +166,7 @@ if __name__ == "__main__":
         address = [ [] for i in range(len(spot_urls)) ]
 
         
-        # スクレイピング
+        # Scraping
         loop = asyncio.get_event_loop()
         # tasks = [asyncio.ensure_future(getURL(spot_urls[i], i)) for i in range(len(spot_urls))]
         # tasks = asyncio.gather(*tasks)
@@ -178,10 +178,10 @@ if __name__ == "__main__":
         """
 
     
-     # データ圧縮
+     # Data compression
     if len([lists for lists in os.listdir(path) if os.path.isfile(os.path.join(path, lists))]) == 47:
-        startdir = path # 圧縮するフォルダpath
-        file_news = startdir +'.zip' # zipファイル名前
+        startdir = path 
+        file_news = startdir +'.zip' # zip file name
         z = zipfile.ZipFile(file_news,'w',zipfile.ZIP_DEFLATED) 
         for dirpath, dirnames, filenames in os.walk(startdir):
             fpath = dirpath.replace(startdir,'')
