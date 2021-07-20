@@ -15,7 +15,7 @@ import asyncio
 
 # In[3]:
 
-# 全国各エリアのURL
+# URL of each area nationwide
 regionURLs = {"hokkaido": "https://www.tripadvisor.jp/Attractions-g298143-Activities-c47-Hokkaido.html",
         "aomori": "https://www.tripadvisor.jp/Attractions-g298238-Activities-c47-Akita_Prefecture_Tohoku.html",
         "iwate": "https://www.tripadvisor.jp/Attractions-g298246-Activities-c47-Iwate_Prefecture_Tohoku.html",
@@ -93,7 +93,7 @@ def get_mainURL(region):
 
 # In[54]:
 
-# 非同期処理スクレイピング
+#Asynchronous processing
 async def fetch(session, url):
     async with session.get(url) as html:
         return await html.text()
@@ -119,7 +119,7 @@ async def download(url):
 
 
 # In[56]:
-# 全国観光地URL取得
+# Get the URL of the National View
 print("start")
 region = list(regionURLs.keys())
 for i in range(len(regionURLs.keys())):
@@ -139,7 +139,7 @@ for i in range(len(regionURLs.keys())):
 
 # In[58]:
 
-# データ保存
+# save data
 df.to_pickle("allURL.pkl")
 print("success")
 
