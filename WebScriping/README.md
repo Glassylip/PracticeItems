@@ -1,3 +1,3 @@
 # WebScraping
-1. コンビニエンスストア　データ取得
-2. トリップアドバイザー　データ取得
+1. Convenience Store data acquisition
+2. Trip Advisor data acquisition
