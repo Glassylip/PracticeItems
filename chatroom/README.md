@@ -1,1 +1,0 @@
-![avatar](chatroom/architecture.png)
