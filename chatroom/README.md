@@ -1,54 +1,50 @@
-ƒtƒHƒ‹ƒ_[ ƒpƒX‚Ìˆê——
-ƒ{ƒŠƒ…[ƒ€ ƒVƒŠƒAƒ‹”Ô†‚Í 0C7D-0E6A ‚Å‚·
-C:.
-„   go.mod
-„   go.sum
-„   README.md
-„   t.txt
-„   
-„¥„Ÿclient
-„   „   login.go
-„   „   main.go
-„   „   utils.go
-„   „   
-„   „¥„Ÿmain
-„   „       main.go
-„   „       
-„   „¥„Ÿmodel
-„   „       curUser.go
-„   „       
-„   „¥„Ÿprocess
-„   „       server.go
-„   „       smsMgr.go
-„   „       smsProcess.go
-„   „       userMgr.go
-„   „       userProcess.go
-„   „       
-„   „¤„Ÿutils
-„           utils.go
-„           
-„¥„Ÿcommon
-„   „¤„Ÿmessage
-„           message.go
-„           user.go
-„           
-„¤„Ÿserver
-    „¥„Ÿmain
-    „       main.go
-    „       processor.go
-    „       redis.go
-    „       
-    „¥„Ÿmodel
-    „       error.go
-    „       user.go
-    „       userDao.go
-    „       
-    „¥„Ÿprocess
-    „       smsProcess.go
-    „       userMgr.go
-    „       userProcess.go
-    „       
-    „¥„Ÿservice
-    „¤„Ÿutils
+
+chatroom
+â”‚  go.mod
+â”‚  go.sum
+â”œâ”€client
+â”‚  â”‚  login.go
+â”‚  â”‚  main.go
+â”‚  â”‚  utils.go
+â”‚  â”‚  
+â”‚  â”œâ”€main
+â”‚  â”‚      main.go
+â”‚  â”‚      
+â”‚  â”œâ”€model
+â”‚  â”‚      curUser.go
+â”‚  â”‚      
+â”‚  â”œâ”€process
+â”‚  â”‚      server.go
+â”‚  â”‚      smsMgr.go
+â”‚  â”‚      smsProcess.go
+â”‚  â”‚      userMgr.go
+â”‚  â”‚      userProcess.go
+â”‚  â”‚      
+â”‚  â””â”€utils
+â”‚          utils.go
+â”‚          
+â”œâ”€common
+â”‚  â””â”€message
+â”‚          message.go
+â”‚          user.go
+â”‚          
+â””â”€server
+    â”œâ”€main
+    â”‚      main.go
+    â”‚      processor.go
+    â”‚      redis.go
+    â”‚      
+    â”œâ”€model
+    â”‚      error.go
+    â”‚      user.go
+    â”‚      userDao.go
+    â”‚      
+    â”œâ”€process
+    â”‚      smsProcess.go
+    â”‚      userMgr.go
+    â”‚      userProcess.go
+    â”‚      
+    â”œâ”€service
+    â””â”€utils
             utils.go
             
