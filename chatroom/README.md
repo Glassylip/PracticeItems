@@ -1,1 +1,1 @@
-![avatar](/architecture.png)
+![avatar](chatroom/architecture.png)
