@@ -1,13 +1,54 @@
-â”œâ”€client  
-â”‚  â”œâ”€main  
-â”‚  â”œâ”€model  
-â”‚  â”œâ”€process  
-â”‚  â””â”€utils  
-â”œâ”€common  
-â”‚  â””â”€message 
-â””â”€server  
-    â”œâ”€main  
-    â”œâ”€model  
-    â”œâ”€process  
-    â”œâ”€service  
-    â””â”€utils  
+ƒtƒHƒ‹ƒ_[ ƒpƒX‚Ìˆê——
+ƒ{ƒŠƒ…[ƒ€ ƒVƒŠƒAƒ‹”Ô†‚Í 0C7D-0E6A ‚Å‚·
+C:.
+„   go.mod
+„   go.sum
+„   README.md
+„   t.txt
+„   
+„¥„Ÿclient
+„   „   login.go
+„   „   main.go
+„   „   utils.go
+„   „   
+„   „¥„Ÿmain
+„   „       main.go
+„   „       
+„   „¥„Ÿmodel
+„   „       curUser.go
+„   „       
+„   „¥„Ÿprocess
+„   „       server.go
+„   „       smsMgr.go
+„   „       smsProcess.go
+„   „       userMgr.go
+„   „       userProcess.go
+„   „       
+„   „¤„Ÿutils
+„           utils.go
+„           
+„¥„Ÿcommon
+„   „¤„Ÿmessage
+„           message.go
+„           user.go
+„           
+„¤„Ÿserver
+    „¥„Ÿmain
+    „       main.go
+    „       processor.go
+    „       redis.go
+    „       
+    „¥„Ÿmodel
+    „       error.go
+    „       user.go
+    „       userDao.go
+    „       
+    „¥„Ÿprocess
+    „       smsProcess.go
+    „       userMgr.go
+    „       userProcess.go
+    „       
+    „¥„Ÿservice
+    „¤„Ÿutils
+            utils.go
+            
