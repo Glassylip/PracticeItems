@@ -1,7 +1,8 @@
-
 chatroom  
 │  go.mod  
 │  go.sum  
+│  t.txt  
+│    
 ├─client  
 │  │  login.go  
 │  │  main.go  
@@ -38,11 +39,11 @@ chatroom
     │      error.go  
     │      user.go  
     │      userDao.go  
-    │      
-    ├─process
-    │      smsProcess.go
-    │      userMgr.go
-    │      userProcess.go
+    │        
+    ├─process  
+    │      smsProcess.go  
+    │      userMgr.go  
+    │      userProcess.go  
     │        
     ├─service  
     └─utils  
